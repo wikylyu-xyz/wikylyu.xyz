@@ -4,5 +4,11 @@
   "switchLanguageTitle": "切换语言",
   "cancel": "取消",
   "ok": "确认",
-  "selfBrief": "我是一名全栈开发，能完成从产品设计，到UI设计，到开发上线的全过程．并交付高质量的结果．"
+  "selfBrief": "我是一名全栈开发，能完成从产品设计，到UI设计，到开发上线的全过程．并交付高质量的结果．",
+  "selfName": "吕伟彬",
+  "websitesIBuild": "我开发的网站",
+  "seogptName": "SEOGPT",
+  "seogptDescription": "基于ChatGPT/Langchain和搜索引擎, 生成高质量，且长度足够的文章.",
+  "dadachatName": "答答好友",
+  "dadachatDescription": "基于ChatGPT，提供各种各样不同的AI角色。"
 }

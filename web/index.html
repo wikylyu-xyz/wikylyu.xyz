@@ -18,8 +18,12 @@
 
     <meta charset="UTF-8" />
     <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
-    <meta name="description" content="A new Flutter project." />
-
+    <meta
+      name="description"
+      content="Wiky Lyu's personal website. introduce his projects."
+    />
+    <meta name="keywords" content="wiky lyu,wiky,wikylyu.xyz" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- iOS meta tags & icons -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -29,7 +33,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png" />
 
-    <title>Hard-working Magikarp</title>
+    <title></title>
     <link rel="manifest" href="manifest.json" />
 
     <script>
@@ -38,19 +42,70 @@
     </script>
     <!-- This script adds the flutter initialization JS code -->
     <script src="flutter.js" defer></script>
+    <style>
+      #loading {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        scale: 0.8;
+      }
+      #loading div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border: 8px solid #2196f3;
+        border-radius: 50%;
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: #2196f3 transparent transparent transparent;
+      }
+      #loading div:nth-child(1) {
+        animation-delay: -0.45s;
+      }
+      #loading div:nth-child(2) {
+        animation-delay: -0.3s;
+      }
+      #loading div:nth-child(3) {
+        animation-delay: -0.15s;
+      }
+      @keyframes lds-ring {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="loading">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <script>
       window.addEventListener("load", function (ev) {
         // Download main.dart.js
+        var loading = document.querySelector("#loading");
+        // loading.textContent = "Loading entrypoint...";
         _flutter.loader.loadEntrypoint({
           serviceWorker: {
             serviceWorkerVersion: serviceWorkerVersion,
           },
-          onEntrypointLoaded: function (engineInitializer) {
-            engineInitializer.initializeEngine().then(function (appRunner) {
-              appRunner.runApp();
-            });
+          onEntrypointLoaded: async function (engineInitializer) {
+            let appRunner = await engineInitializer.initializeEngine();
+            loading.remove();
+            await appRunner.runApp();
           },
         });
       });

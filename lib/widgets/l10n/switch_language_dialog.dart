@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localized_locales/flutter_localized_locales.dart';
 import 'package:wikylyu_xyz/bloc/language_cubit.dart';
+import 'package:wikylyu_xyz/service/shared.dart';
 
 class SwitchLanguageDialog extends StatefulWidget {
   final String languageCode;
@@ -97,5 +98,18 @@ void showSwitchLanguageDialog(BuildContext context) async {
 
   if (code != null && code.isNotEmpty && context.mounted) {
     context.read<LanguageCubit>().set(code);
+    SharedPreferencesService.prefs
+        .setString(SharedPreferencesService.keyLanguage, code);
+  }
+}
+
+class SwitchLanguageButton extends StatelessWidget {
+  const SwitchLanguageButton({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      onPressed: () => showSwitchLanguageDialog(context),
+      icon: const Icon(Icons.language),
+    );
   }
 }

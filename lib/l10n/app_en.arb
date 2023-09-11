@@ -4,5 +4,11 @@
   "switchLanguageTitle": "Switch Language",
   "cancel": "Cancel",
   "ok": "OK",
-  "selfBrief": "I am a full-stack developer, who can complete the entire process from product design, to UI design, to development, and deliver high-quality results."
+  "selfBrief": "I'm a full-stack developer, who can complete the entire process from product design, to UI design, to development, and deliver high-quality results.",
+  "selfName": "Wiky Lyu",
+  "websitesIBuild": "WEBSITES I BUILD",
+  "seogptName": "SEOGPT",
+  "seogptDescription": "based on ChatGPT/Langchain and Search Engine, generates high quality, long enough articles.",
+  "dadachatName": "DadaChat",
+  "dadachatDescription": "base on ChatGPT, providing a variety of different AI characters."
 }
