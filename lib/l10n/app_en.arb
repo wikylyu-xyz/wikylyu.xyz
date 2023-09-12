@@ -48,5 +48,6 @@
   "timeDescription": "It costs a little long to generate an entire article, about 5-10 minutes.",
   "money": "Money",
   "moneyDescription": "It also costs more chatgpt api credits.",
-  "haveATry": "Have a try?"
+  "haveATry": "Have a try?",
+  "availableForRemoteWork": "Available for remote work"
 }

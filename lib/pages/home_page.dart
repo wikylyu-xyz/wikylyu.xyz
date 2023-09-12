@@ -1,9 +1,13 @@
 import 'package:animated_background/animated_background.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:lifecycle/lifecycle.dart';
 import 'package:wikylyu_xyz/service/lifecycle.dart';
 import 'package:wikylyu_xyz/widgets/l10n/switch_language_dialog.dart';
+import 'package:wikylyu_xyz/widgets/tears_map_item.dart';
 import 'package:wikylyu_xyz/widgets/website_item.dart';
+import 'dart:html';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -12,7 +16,8 @@ class HomePage extends StatefulWidget {
   State<StatefulWidget> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+class _HomePageState extends State<HomePage>
+    with TickerProviderStateMixin, LifecycleAware, LifecycleMixin {
   final List<String> labels = [
     "Golang",
     "Python",
@@ -28,16 +33,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   ];
 
   @override
-  void initState() {
-    super.initState();
-
-    WidgetsBinding.instance.addObserver(
-      LifecycleEventHandler(
-        resumeCallBack: () async => setState(
-          () {},
-        ),
-      ),
-    );
+  void onLifecycleEvent(LifecycleEvent event) {
+    if (event == LifecycleEvent.active) {
+      setState(() {});
+    }
   }
 
   @override
@@ -83,6 +82,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 iconTag: "dadachat-icon",
                 url: "/dadachat",
               ),
+              const SizedBox(height: 20),
+              buildTitle("MOBILE APPS I BUILD"),
+              const TearsMapItem(),
             ],
           ),
         ),

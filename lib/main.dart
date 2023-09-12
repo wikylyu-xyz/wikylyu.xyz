@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localized_locales/flutter_localized_locales.dart';
+import 'package:lifecycle/lifecycle.dart';
 import 'package:wikylyu_xyz/bloc/language_cubit.dart';
 import 'package:wikylyu_xyz/pages/about_page.dart';
 import 'package:wikylyu_xyz/pages/dadachat_page.dart';
 import 'package:wikylyu_xyz/pages/home_page.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:wikylyu_xyz/pages/seogpt_page.dart';
+import 'package:wikylyu_xyz/pages/tears_map_page.dart';
 import 'package:wikylyu_xyz/service/colors.dart';
 import 'package:wikylyu_xyz/service/shared.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
@@ -35,6 +37,7 @@ class MyApp extends StatelessWidget {
       child: BlocBuilder<LanguageCubit, String>(
         builder: (context, state) => MaterialApp(
           debugShowCheckedModeBanner: false,
+          navigatorObservers: [defaultLifecycleObserver],
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(
               seedColor: Colors.blue,
@@ -53,6 +56,7 @@ class MyApp extends StatelessWidget {
             "/about": (context) => const AboutPage(),
             "/seogpt": (context) => const SeogptPage(),
             "/dadachat": (context) => const DadachatPage(),
+            "/totk": (context) => const TearsMapPage(),
           },
         ),
       ),

@@ -44,6 +44,8 @@ dependencies:
   animated_background: ^2.0.0
   shared_preferences: ^2.2.1
   url_launcher: ^6.1.14
+  flutter_svg: ^2.0.7
+  lifecycle: ^0.8.0
 
 dev_dependencies:
   flutter_test:
@@ -99,9 +101,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    # - family: "PingFang"
-    #   fonts:
-    #     - asset: assets/fonts/PingFang.ttf
+    - family: "Hylia"
+      fonts:
+        - asset: assets/fonts/HyliaSerifBeta-Regular.otf
     - family: "NotoSansSC"
       fonts:
         - asset: assets/fonts/NotoSansSC-Regular.ttf

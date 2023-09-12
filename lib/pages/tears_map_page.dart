@@ -3,15 +3,15 @@ import 'package:wikylyu_xyz/service/colors.dart';
 import 'package:wikylyu_xyz/widgets/l10n/switch_language_dialog.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class DadachatPage extends StatefulWidget {
-  const DadachatPage({super.key});
+class TearsMapPage extends StatefulWidget {
+  const TearsMapPage({super.key});
 
   @override
-  State<StatefulWidget> createState() => _DadachatPageState();
+  State<StatefulWidget> createState() => _TearsMapPageState();
 }
 
-class _DadachatPageState extends State<DadachatPage> {
-  final ColorScheme colorScheme = ColorsService.dadachatColorScheme;
+class _TearsMapPageState extends State<TearsMapPage> {
+  final ColorScheme colorScheme = ColorsService.totkColorSchema;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class _DadachatPageState extends State<DadachatPage> {
 
     return Title(
       color: Colors.white,
-      title: l10n.dadachatName,
+      title: "Tears Map",
       child: Theme(
         data: Theme.of(context).copyWith(
           colorScheme: colorScheme,
@@ -27,10 +27,20 @@ class _DadachatPageState extends State<DadachatPage> {
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: colorScheme.inversePrimary,
-            title: Text(l10n.dadachatName),
+            title: const Text("Tears Map"),
             actions: const [
               SwitchLanguageButton(),
             ],
+          ),
+          body: Container(
+            width: double.infinity,
+            height: double.infinity,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/images/totk_background.jpg"),
+                repeat: ImageRepeat.repeat,
+              ),
+            ),
           ),
         ),
       ),

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 import 'package:wikylyu_xyz/widgets/l10n/switch_language_dialog.dart';
 
 class AboutPage extends StatefulWidget {
@@ -24,6 +27,62 @@ class _AboutPageState extends State<AboutPage> {
           actions: const [
             SwitchLanguageButton(),
           ],
+        ),
+        body: Container(
+          width: double.infinity,
+          padding: const EdgeInsets.only(
+            left: 10,
+            right: 10,
+            top: 40,
+            bottom: 40,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Image.asset(
+                    "assets/images/logo150x150.png",
+                    width: 140,
+                    height: 140,
+                    isAntiAlias: true,
+                    fit: BoxFit.contain,
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 20),
+                    child: Text(
+                      l10n.selfName,
+                      style: const TextStyle(fontSize: 24),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 20),
+                    child: Text(
+                      l10n.availableForRemoteWork,
+                      style: const TextStyle(fontSize: 16),
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 20),
+                    child: InkWell(
+                      onTap: () =>
+                          launchUrlString("mailto:wiky.lyu.dev@gmail.com"),
+                      child: Text(
+                        "Contact",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SvgPicture.asset("assets/images/flutter.svg")
+            ],
+          ),
         ),
       ),
     );
