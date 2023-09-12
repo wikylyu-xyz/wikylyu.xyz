@@ -1,6 +1,7 @@
 import 'package:animated_background/animated_background.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:wikylyu_xyz/service/lifecycle.dart';
 import 'package:wikylyu_xyz/widgets/l10n/switch_language_dialog.dart';
 import 'package:wikylyu_xyz/widgets/website_item.dart';
 
@@ -27,6 +28,19 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   ];
 
   @override
+  void initState() {
+    super.initState();
+
+    WidgetsBinding.instance.addObserver(
+      LifecycleEventHandler(
+        resumeCallBack: () async => setState(
+          () {},
+        ),
+      ),
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     return Title(
@@ -36,8 +50,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text(l10n.home),
-          actions: const [
-            SwitchLanguageButton(),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pushNamed(context, "/about"),
+              child: Text(l10n.about),
+            ),
+            const SwitchLanguageButton(),
           ],
         ),
         body: SizedBox(
@@ -55,13 +73,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 name: l10n.seogptName,
                 description: l10n.seogptDescription,
                 icon: "assets/images/seogpt_logo64x64.png",
-                url: "https://seogpt.work",
+                iconTag: "seogpt-icon",
+                url: "/seogpt",
               ),
               WebsiteItem(
                 name: l10n.dadachatName,
                 description: l10n.dadachatDescription,
                 icon: "assets/images/dadachat_logo64x64.png",
-                url: "https://dadachat.cn",
+                iconTag: "dadachat-icon",
+                url: "/dadachat",
               ),
             ],
           ),

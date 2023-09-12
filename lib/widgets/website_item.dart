@@ -6,12 +6,14 @@ class WebsiteItem extends StatefulWidget {
   final String name;
   final String description;
   final String icon;
+  final String iconTag;
   final String url;
   const WebsiteItem({
     super.key,
     required this.name,
     required this.description,
     required this.icon,
+    required this.iconTag,
     required this.url,
   });
 
@@ -47,11 +49,17 @@ class _WebsiteItemState extends State<WebsiteItem> {
           child: SizedBox(
             width: 600,
             child: ListTile(
-              onTap: () => launchUrlString(widget.url),
-              leading: Image.asset(
-                widget.icon,
-                width: 48,
-                height: 48,
+              onTap: () => Navigator.pushNamed(
+                context,
+                widget.url,
+              ),
+              leading: Hero(
+                tag: widget.iconTag,
+                child: Image.asset(
+                  widget.icon,
+                  width: 48,
+                  height: 48,
+                ),
               ),
               title: Text(
                 widget.name,
