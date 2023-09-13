@@ -7,6 +7,7 @@
   "selfBrief": "I'm a full-stack developer, who can complete the entire process from product design, to UI design, to development, and deliver high-quality results.",
   "selfName": "Wiky Lyu",
   "websitesIBuild": "WEBSITES I BUILD",
+  "mobileAppsIBuild": "MOBILE APPS I BUILD",
   "seogptName": "SEOGPT",
   "seogptDescription": "Based on ChatGPT/Langchain and Search Engine, generates high-quality, long enough articles.",
   "dadachatName": "DadaChat",
@@ -49,5 +50,9 @@
   "money": "Money",
   "moneyDescription": "It also costs more chatgpt api credits.",
   "haveATry": "Have a try?",
-  "availableForRemoteWork": "Available for remote work"
+  "availableForRemoteWork": "Available for remote work",
+  "tearsMapDescription": "A interactive game map for Tears of the Kingdom.",
+  "tempediaDescription": "A Temtem Encyclopedia",
+  "animalsDescription": "Unofficial Party Animals app",
+  "solely": "All the projects listed above are created solely by me."
 }

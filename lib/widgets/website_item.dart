@@ -38,10 +38,12 @@ class _WebsiteItemState extends State<WebsiteItem> {
         child: SizedBox(
           width: 600,
           child: ListTile(
-            onTap: () => Navigator.pushNamed(
-              context,
-              widget.url,
-            ),
+            onTap: () => widget.url.startsWith("http")
+                ? launchUrlString(widget.url)
+                : Navigator.pushNamed(
+                    context,
+                    widget.url,
+                  ),
             leading: Hero(
               tag: widget.iconTag,
               child: Image.asset(

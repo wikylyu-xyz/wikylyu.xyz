@@ -7,6 +7,7 @@
   "selfBrief": "我是一名全栈开发，能完成从产品设计，到UI设计，到开发上线的全过程．并交付高质量的结果．",
   "selfName": "吕伟彬",
   "websitesIBuild": "我开发的网站",
+  "mobileAppsIBuild": "我开发的手机APP",
   "seogptName": "SEOGPT",
   "seogptDescription": "基于ChatGPT/Langchain和搜索引擎, 生成高质量，且长度足够的文章.",
   "dadachatName": "答答好友",
@@ -49,5 +50,9 @@
   "money": "费用",
   "moneyDescription": "同样也需要花费跟多的接口费用．",
   "haveATry": "尝试一下?",
-  "availableForRemoteWork": "可以远程工作"
+  "availableForRemoteWork": "可以远程工作",
+  "tearsMapDescription": "游戏王国之泪的交互式地图APP",
+  "tempediaDescription": "Temtem游戏百科全书",
+  "animalsDescription": "猛兽派对的非官方APP",
+  "solely": "上述所有项目都是我一个人独自开发完成的."
 }

@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:lifecycle/lifecycle.dart';
 import 'package:wikylyu_xyz/service/lifecycle.dart';
+import 'package:wikylyu_xyz/widgets/animals_item.dart';
 import 'package:wikylyu_xyz/widgets/l10n/switch_language_dialog.dart';
 import 'package:wikylyu_xyz/widgets/tears_map_item.dart';
+import 'package:wikylyu_xyz/widgets/tempedia_item.dart';
 import 'package:wikylyu_xyz/widgets/website_item.dart';
 import 'dart:html';
 
@@ -24,9 +26,10 @@ class _HomePageState extends State<HomePage>
     "Scrapy",
     "PostgreSQL",
     "Django",
+    "Fastapi",
     "Flutter",
     "Angular",
-    "LangChain",
+    "LangChain/LlamaIndex",
     "Nginx",
     "Google Play",
     "App Store"
@@ -80,11 +83,22 @@ class _HomePageState extends State<HomePage>
                 description: l10n.dadachatDescription,
                 icon: "assets/images/dadachat_logo64x64.png",
                 iconTag: "dadachat-icon",
-                url: "/dadachat",
+                url: "https://dadachat.cn",
               ),
               const SizedBox(height: 20),
-              buildTitle("MOBILE APPS I BUILD"),
+              buildTitle(l10n.mobileAppsIBuild),
               const TearsMapItem(),
+              const TempediaItem(),
+              const AnimalsItem(),
+              Container(
+                margin: const EdgeInsets.only(top: 40),
+                alignment: Alignment.center,
+                child: Text(l10n.solely),
+              ),
+              const Divider(),
+              const SizedBox(
+                height: 60,
+              )
             ],
           ),
         ),

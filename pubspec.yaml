@@ -111,6 +111,12 @@ flutter:
           weight: 700
         - asset: assets/fonts/NotoSansSC-Light.ttf
           weight: 300
+    - family: "Helsinki"
+      fonts:
+        - asset: assets/fonts/Helsinki-Black.ttf
+    - family: "MohrRounded"
+      fonts:
+        - asset: assets/fonts/MohrRounded-Medium.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

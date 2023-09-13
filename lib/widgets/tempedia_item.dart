@@ -3,56 +3,50 @@ import 'package:url_launcher/url_launcher_string.dart';
 import 'package:wikylyu_xyz/service/colors.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class TearsMapItem extends StatefulWidget {
-  const TearsMapItem({super.key});
+class TempediaItem extends StatefulWidget {
+  const TempediaItem({super.key});
 
   @override
-  State<StatefulWidget> createState() => _TearsMapItemState();
+  State<StatefulWidget> createState() => _TempediaItemState();
 }
 
-class _TearsMapItemState extends State<TearsMapItem> {
+class _TempediaItemState extends State<TempediaItem> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
 
     return Theme(
       data: Theme.of(context)
-          .copyWith(colorScheme: ColorsService.totkColorSchema),
+          .copyWith(colorScheme: ColorsService.tempediaColorScheme),
       child: Container(
         alignment: Alignment.center,
         margin: const EdgeInsets.only(top: 5, bottom: 5),
         padding: const EdgeInsets.only(left: 5, right: 5),
         child: Card(
           clipBehavior: Clip.antiAlias,
-          child: Container(
+          child: SizedBox(
             width: 600,
-            // decoration: const BoxDecoration(
-            //   image: DecorationImage(
-            //     image: AssetImage("assets/images/totk_background.jpg"),
-            //     repeat: ImageRepeat.repeat,
-            //   ),
-            // ),
             child: ListTile(
-              onTap: () => launchUrlString("https://totk.wikylyu.xyz"),
+              onTap: () => launchUrlString("https://tempedia.wikylyu.xyz"),
               leading: Hero(
-                tag: "totk-logo",
+                tag: "tempedia-logo",
                 child: Image.asset(
-                  "assets/images/totk_logo.png",
+                  "assets/images/tempedia_logo.png",
                   width: 48,
                   height: 48,
                 ),
               ),
               title: const Text(
-                "Tears Map",
+                "Tempedia",
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
-                  fontFamily: "Hylia",
+                  fontFamily: "Helsinki",
                 ),
               ),
               subtitle: Text(
-                l10n.tearsMapDescription,
+                l10n.tempediaDescription,
                 style: const TextStyle(
-                  fontFamily: "Hylia",
+                  fontFamily: "Helsinki",
                 ),
               ),
             ),

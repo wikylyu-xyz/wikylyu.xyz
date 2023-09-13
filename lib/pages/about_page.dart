@@ -58,6 +58,29 @@ class _AboutPageState extends State<AboutPage> {
                     ),
                   ),
                   Container(
+                    margin: const EdgeInsets.only(
+                      top: 10,
+                    ),
+                    child: InkWell(
+                      onTap: () =>
+                          launchUrlString("https://github.com/wikylyu"),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Image.asset(
+                            "assets/images/github-mark.png",
+                            width: 20,
+                            height: 20,
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(left: 10),
+                            child: const Text("Github"),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
                     margin: const EdgeInsets.only(top: 20),
                     child: Text(
                       l10n.availableForRemoteWork,
