@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:wikylyu_xyz/service/colors.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class TearsMapItem extends StatefulWidget {
-  const TearsMapItem({super.key});
+class Horizon5CarsItem extends StatefulWidget {
+  const Horizon5CarsItem({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => _TearsMapItemState();
+  createState() => _Horizon5CarsItemState();
 }
 
-class _TearsMapItemState extends State<TearsMapItem> {
+class _Horizon5CarsItemState extends State<Horizon5CarsItem> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
 
     return Theme(
-      data: Theme.of(context)
-          .copyWith(colorScheme: ColorsService.totkColorSchema),
+      data:
+          Theme.of(context).copyWith(colorScheme: ColorsService.fh5ColorScheme),
       child: Container(
         alignment: Alignment.center,
         margin: const EdgeInsets.only(top: 5, bottom: 5),
@@ -27,26 +27,26 @@ class _TearsMapItemState extends State<TearsMapItem> {
           child: Container(
             width: 600,
             child: ListTile(
-              onTap: () => launchUrlString("https://totk.wikylyu.xyz"),
+              onTap: () => launchUrlString("https://fh5.wikylyu.xyz"),
               leading: Hero(
                 tag: "totk-logo",
                 child: Image.asset(
-                  "assets/images/totk_logo.png",
+                  "assets/images/fh5_logo.png",
                   width: 48,
                   height: 48,
                 ),
               ),
               title: const Text(
-                "Tears Map",
+                "Horizon 5 Cars",
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
-                  fontFamily: "Hylia",
+                  fontFamily: "Share",
                 ),
               ),
               subtitle: Text(
-                l10n.tearsMapDescription,
+                l10n.fh5Description,
                 style: const TextStyle(
-                  fontFamily: "Hylia",
+                  fontFamily: "Share",
                 ),
               ),
             ),

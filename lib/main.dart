@@ -44,6 +44,7 @@ class MyApp extends StatelessWidget {
             ),
             useMaterial3: true,
             fontFamily: "NotoSansSC",
+            fontFamilyFallback: const ["NotoSansSC"],
           ),
           locale: Locale(state),
           localizationsDelegates: const [

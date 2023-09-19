@@ -6,6 +6,7 @@ class ColorsService {
   static late ColorScheme totkColorSchema;
   static late ColorScheme tempediaColorScheme;
   static late ColorScheme animalsColorScheme;
+  static late ColorScheme fh5ColorScheme;
 
   static initilize() async {
     seogptColorScheme = await ColorScheme.fromImageProvider(
@@ -23,6 +24,9 @@ class ColorsService {
     );
     animalsColorScheme = await ColorScheme.fromImageProvider(
       provider: const AssetImage("assets/images/animals_logo.png"),
+    );
+    fh5ColorScheme = await ColorScheme.fromImageProvider(
+      provider: const AssetImage("assets/images/fh5_logo.png"),
     );
   }
 }
