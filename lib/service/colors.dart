@@ -7,6 +7,7 @@ class ColorsService {
   static late ColorScheme tempediaColorScheme;
   static late ColorScheme animalsColorScheme;
   static late ColorScheme fh5ColorScheme;
+  static late ColorScheme sf6ColorScheme;
 
   static initilize() async {
     seogptColorScheme = await ColorScheme.fromImageProvider(
@@ -27,6 +28,10 @@ class ColorsService {
     );
     fh5ColorScheme = await ColorScheme.fromImageProvider(
       provider: const AssetImage("assets/images/fh5_logo.png"),
+    );
+    sf6ColorScheme = ColorScheme.fromSwatch(
+      primarySwatch: Colors.deepPurple,
+      brightness: Brightness.dark,
     );
   }
 }

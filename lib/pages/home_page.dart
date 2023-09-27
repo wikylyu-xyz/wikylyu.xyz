@@ -7,6 +7,7 @@ import 'package:wikylyu_xyz/service/lifecycle.dart';
 import 'package:wikylyu_xyz/widgets/animals_item.dart';
 import 'package:wikylyu_xyz/widgets/fh5_item.dart';
 import 'package:wikylyu_xyz/widgets/l10n/switch_language_dialog.dart';
+import 'package:wikylyu_xyz/widgets/sf6_item.dart';
 import 'package:wikylyu_xyz/widgets/tears_map_item.dart';
 import 'package:wikylyu_xyz/widgets/tempedia_item.dart';
 import 'package:wikylyu_xyz/widgets/website_item.dart';
@@ -92,6 +93,7 @@ class _HomePageState extends State<HomePage>
               const TempediaItem(),
               const AnimalsItem(),
               const Horizon5CarsItem(),
+              const Sf6Item(),
               Container(
                 margin: const EdgeInsets.only(top: 40),
                 alignment: Alignment.center,
