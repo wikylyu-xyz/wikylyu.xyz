@@ -8,6 +8,7 @@ class ColorsService {
   static late ColorScheme animalsColorScheme;
   static late ColorScheme fh5ColorScheme;
   static late ColorScheme sf6ColorScheme;
+  static late ColorScheme kof15ColorScheme;
 
   static initilize() async {
     seogptColorScheme = await ColorScheme.fromImageProvider(
@@ -32,6 +33,9 @@ class ColorsService {
     sf6ColorScheme = ColorScheme.fromSwatch(
       primarySwatch: Colors.deepPurple,
       brightness: Brightness.dark,
+    );
+    kof15ColorScheme = ColorScheme.fromSwatch(
+      primarySwatch: Colors.blue,
     );
   }
 }

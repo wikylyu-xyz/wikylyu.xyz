@@ -1,49 +1,50 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:wikylyu_xyz/service/colors.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class SF6Item extends StatefulWidget {
-  const SF6Item({Key? key}) : super(key: key);
+class KOF15Item extends StatefulWidget {
+  const KOF15Item({super.key});
 
   @override
-  createState() => _SF6ItemState();
+  State<StatefulWidget> createState() => _KOF15ItemState();
 }
 
-class _SF6ItemState extends State<SF6Item> {
+class _KOF15ItemState extends State<KOF15Item> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
 
     return Theme(
-      data:
-          Theme.of(context).copyWith(colorScheme: ColorsService.sf6ColorScheme),
+      data: Theme.of(context)
+          .copyWith(colorScheme: ColorsService.tempediaColorScheme),
       child: Container(
         alignment: Alignment.center,
         margin: const EdgeInsets.only(top: 5, bottom: 5),
         padding: const EdgeInsets.only(left: 5, right: 5),
         child: Card(
           clipBehavior: Clip.antiAlias,
-          child: Container(
+          child: SizedBox(
             width: 600,
             child: ListTile(
-              onTap: () => launchUrlString("https://sf6.wikylyu.xyz"),
+              onTap: () => launchUrlString("https://kof15.wikylyu.xyz"),
               leading: Hero(
-                tag: "sf6-logo",
+                tag: "kof15-logo",
                 child: Image.asset(
-                  "assets/images/sf6_logo.png",
+                  "assets/images/kof15_logo.png",
                   width: 48,
                   height: 48,
                 ),
               ),
               title: const Text(
-                "SF6 Moves",
+                "KXV Moves",
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
                 ),
               ),
               subtitle: Text(
-                l10n.sf6Description,
+                l10n.kof15Description,
+                style: const TextStyle(),
               ),
             ),
           ),
