@@ -1,9 +1,7 @@
 import 'package:animated_background/animated_background.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:lifecycle/lifecycle.dart';
-import 'package:wikylyu_xyz/service/lifecycle.dart';
 import 'package:wikylyu_xyz/widgets/animals_item.dart';
 import 'package:wikylyu_xyz/widgets/fh5_item.dart';
 import 'package:wikylyu_xyz/widgets/kof15_item.dart';
@@ -12,7 +10,6 @@ import 'package:wikylyu_xyz/widgets/sf6_item.dart';
 import 'package:wikylyu_xyz/widgets/tears_map_item.dart';
 import 'package:wikylyu_xyz/widgets/tempedia_item.dart';
 import 'package:wikylyu_xyz/widgets/website_item.dart';
-import 'dart:html';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

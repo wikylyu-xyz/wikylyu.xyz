@@ -24,7 +24,7 @@ class _SF6ItemState extends State<SF6Item> {
         padding: const EdgeInsets.only(left: 5, right: 5),
         child: Card(
           clipBehavior: Clip.antiAlias,
-          child: Container(
+          child: SizedBox(
             width: 600,
             child: ListTile(
               onTap: () => launchUrlString("https://sf6.wikylyu.xyz"),

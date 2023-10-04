@@ -24,7 +24,7 @@ class _Horizon5CarsItemState extends State<Horizon5CarsItem> {
         padding: const EdgeInsets.only(left: 5, right: 5),
         child: Card(
           clipBehavior: Clip.antiAlias,
-          child: Container(
+          child: SizedBox(
             width: 600,
             child: ListTile(
               onTap: () => launchUrlString("https://fh5.wikylyu.xyz"),
