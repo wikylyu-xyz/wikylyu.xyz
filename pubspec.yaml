@@ -120,6 +120,9 @@ flutter:
     - family: "Share"
       fonts:
         - asset: assets/fonts/share.ttf
+    - family: "Acumin Pro Condensed"
+      fonts:
+        - asset: assets/fonts/Acumin-Pro-Condensed-Regular.otf
       
   # fonts:
   #   - family: Schyler

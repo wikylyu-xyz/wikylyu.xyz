@@ -4,6 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:lifecycle/lifecycle.dart';
 import 'package:wikylyu_xyz/widgets/animals_item.dart';
 import 'package:wikylyu_xyz/widgets/fh5_item.dart';
+import 'package:wikylyu_xyz/widgets/fm2023_item.dart';
 import 'package:wikylyu_xyz/widgets/kof15_item.dart';
 import 'package:wikylyu_xyz/widgets/l10n/switch_language_dialog.dart';
 import 'package:wikylyu_xyz/widgets/sf6_item.dart';
@@ -89,10 +90,11 @@ class _HomePageState extends State<HomePage>
               buildTitle(l10n.mobileAppsIBuild),
               const TearsMapItem(),
               const TempediaItem(),
-              const AnimalsItem(),
               const Horizon5CarsItem(),
+              const FM2023Item(),
               const SF6Item(),
               const KOF15Item(),
+              const AnimalsItem(),
               Container(
                 margin: const EdgeInsets.only(top: 40),
                 alignment: Alignment.center,
