@@ -95,6 +95,14 @@ class _HomePageState extends State<HomePage>
               const SF6Item(),
               const KOF15Item(),
               const AnimalsItem(),
+              buildTitle(l10n.browserExtensionsIBuild),
+              WebsiteItem(
+                name: "ClickMan",
+                description: l10n.clickManDescription,
+                icon: "assets/images/clickman_logo.png",
+                iconTag: "clickman-icon",
+                url: "https://clickman.wikylyu.xyz",
+              ),
               Container(
                 margin: const EdgeInsets.only(top: 40),
                 alignment: Alignment.center,

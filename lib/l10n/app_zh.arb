@@ -58,5 +58,7 @@
   "sf6Description": "街霸6的招式列表以及帧数据，对初学者非常有用",
   "kof15Description": "拳皇15的招式列表",
   "solely": "上述所有项目都是我一个人独自开发完成的.",
-  "fm2023Description": "包含所有 Forza Motorsport 2023 赛车及详细信息。"
+  "fm2023Description": "包含所有 Forza Motorsport 2023 赛车及详细信息。",
+  "browserExtensionsIBuild": "我开发的浏览器扩展",
+  "clickManDescription": "自动点击YouTube的\"跳过广告\"按钮"
 }
