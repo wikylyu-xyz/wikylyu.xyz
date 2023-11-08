@@ -7,6 +7,7 @@ import 'package:wikylyu_xyz/widgets/fh5_item.dart';
 import 'package:wikylyu_xyz/widgets/fm2023_item.dart';
 import 'package:wikylyu_xyz/widgets/kof15_item.dart';
 import 'package:wikylyu_xyz/widgets/l10n/switch_language_dialog.dart';
+import 'package:wikylyu_xyz/widgets/magikarp_icon.dart';
 import 'package:wikylyu_xyz/widgets/rof_item.dart';
 import 'package:wikylyu_xyz/widgets/sf6_item.dart';
 import 'package:wikylyu_xyz/widgets/tears_map_item.dart';
@@ -169,13 +170,7 @@ class _HomePageState extends State<HomePage>
         ),
         child: Column(
           children: [
-            Image.asset(
-              "assets/images/logo150x150.png",
-              width: 140,
-              height: 140,
-              isAntiAlias: true,
-              fit: BoxFit.contain,
-            ),
+            const MagikarpIcon(),
             Container(
               margin: const EdgeInsets.only(top: 20),
               child: Text(
