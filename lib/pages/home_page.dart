@@ -105,8 +105,8 @@ class _HomePageState extends State<HomePage>
                 iconTag: "clickman-icon",
                 url: "https://clickman.wikylyu.xyz",
               ),
-              buildTitle(l10n.novelsIWrite),
-              const ROFItem(),
+              // buildTitle(l10n.novelsIWrite),
+              // const ROFItem(),
               Container(
                 margin: const EdgeInsets.only(top: 40),
                 alignment: Alignment.center,
