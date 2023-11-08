@@ -7,6 +7,7 @@ import 'package:wikylyu_xyz/widgets/fh5_item.dart';
 import 'package:wikylyu_xyz/widgets/fm2023_item.dart';
 import 'package:wikylyu_xyz/widgets/kof15_item.dart';
 import 'package:wikylyu_xyz/widgets/l10n/switch_language_dialog.dart';
+import 'package:wikylyu_xyz/widgets/rof_item.dart';
 import 'package:wikylyu_xyz/widgets/sf6_item.dart';
 import 'package:wikylyu_xyz/widgets/tears_map_item.dart';
 import 'package:wikylyu_xyz/widgets/tempedia_item.dart';
@@ -103,6 +104,8 @@ class _HomePageState extends State<HomePage>
                 iconTag: "clickman-icon",
                 url: "https://clickman.wikylyu.xyz",
               ),
+              buildTitle(l10n.novelsIWrite),
+              const ROFItem(),
               Container(
                 margin: const EdgeInsets.only(top: 40),
                 alignment: Alignment.center,
@@ -111,7 +114,7 @@ class _HomePageState extends State<HomePage>
               const Divider(),
               const SizedBox(
                 height: 60,
-              )
+              ),
             ],
           ),
         ),

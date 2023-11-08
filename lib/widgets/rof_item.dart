@@ -3,21 +3,21 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:wikylyu_xyz/service/colors.dart';
 
-class Horizon5CarsItem extends StatefulWidget {
-  const Horizon5CarsItem({Key? key}) : super(key: key);
+class ROFItem extends StatefulWidget {
+  const ROFItem({Key? key}) : super(key: key);
 
   @override
-  createState() => _Horizon5CarsItemState();
+  createState() => _ROFItemState();
 }
 
-class _Horizon5CarsItemState extends State<Horizon5CarsItem> {
+class _ROFItemState extends State<ROFItem> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
 
     return Theme(
       data:
-          Theme.of(context).copyWith(colorScheme: ColorsService.fh5ColorScheme),
+          Theme.of(context).copyWith(colorScheme: ColorsService.rofColorScheme),
       child: Container(
         alignment: Alignment.center,
         margin: const EdgeInsets.only(top: 5, bottom: 5),
@@ -27,27 +27,23 @@ class _Horizon5CarsItemState extends State<Horizon5CarsItem> {
           child: SizedBox(
             width: 600,
             child: ListTile(
-              onTap: () => launchUrlString("https://fh5.wikylyu.xyz"),
+              onTap: () => launchUrlString("https://rof.wikylyu.xyz"),
               leading: Hero(
-                tag: "fh5-logo",
+                tag: "rof-logo",
                 child: Image.asset(
-                  "assets/images/fh5_logo.png",
+                  "assets/images/rof_logo.png",
                   width: 48,
                   height: 48,
                 ),
               ),
-              title: const Text(
-                "Horizon 5 Cars",
-                style: TextStyle(
+              title: Text(
+                l10n.rofName,
+                style: const TextStyle(
                   fontWeight: FontWeight.w600,
-                  fontFamily: "Share",
                 ),
               ),
               subtitle: Text(
-                l10n.fh5Description,
-                style: const TextStyle(
-                  fontFamily: "Share",
-                ),
+                l10n.rofDescription,
               ),
             ),
           ),
