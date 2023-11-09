@@ -63,5 +63,7 @@
   "novelsIWrite": "NOVELS",
   "clickManDescription": "Automatically click YouTube \"Skip Ads\" button",
   "rofName": "Ring of Flame(under development)",
-  "rofDescription": "Imaginary fantasy novel"
+  "rofDescription": "Imaginary fantasy novel",
+  "commandlineToolsIBuild": "COMMANDLINE TOOLS",
+  "mtopDescription": "A custom network proxy based on QUIC or TLS"
 }

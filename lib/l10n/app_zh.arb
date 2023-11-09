@@ -63,5 +63,7 @@
   "novelsIWrite": "小说",
   "clickManDescription": "自动点击YouTube的\"跳过广告\"按钮",
   "rofName": "火焰之轮(开发中)",
-  "rofDescription": "架空魔幻长篇小说"
+  "rofDescription": "架空魔幻长篇小说",
+  "commandlineToolsIBuild": "命令行工具",
+  "mtopDescription": "基于 QUIC 或 TLS 的自定义网络代理"
 }
