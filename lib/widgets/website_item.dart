@@ -5,14 +5,14 @@ class WebsiteItem extends StatefulWidget {
   final String name;
   final String description;
   final String icon;
-  final String iconTag;
+  final String? iconTag;
   final String url;
   const WebsiteItem({
     super.key,
     required this.name,
     required this.description,
     required this.icon,
-    required this.iconTag,
+    this.iconTag,
     required this.url,
   });
 
@@ -43,14 +43,20 @@ class _WebsiteItemState extends State<WebsiteItem> {
                     context,
                     widget.url,
                   ),
-            leading: Hero(
-              tag: widget.iconTag,
-              child: Image.asset(
-                widget.icon,
-                width: 48,
-                height: 48,
-              ),
-            ),
+            leading: widget.iconTag != null
+                ? Hero(
+                    tag: widget.iconTag!,
+                    child: Image.asset(
+                      widget.icon,
+                      width: 48,
+                      height: 48,
+                    ),
+                  )
+                : Image.asset(
+                    widget.icon,
+                    width: 48,
+                    height: 48,
+                  ),
             title: Text(
               widget.name,
               style: const TextStyle(

@@ -9,6 +9,7 @@ class ColorsService {
   static late ColorScheme fh5ColorScheme;
   static late ColorScheme sf6ColorScheme;
   static late ColorScheme kof15ColorScheme;
+  static late ColorScheme rofColorScheme;
 
   static initilize() async {
     seogptColorScheme = await ColorScheme.fromImageProvider(
@@ -36,6 +37,10 @@ class ColorsService {
     );
     kof15ColorScheme = ColorScheme.fromSwatch(
       primarySwatch: Colors.blue,
+    );
+    rofColorScheme = ColorScheme.fromSeed(
+      seedColor: Colors.deepOrange,
+      brightness: Brightness.dark,
     );
   }
 }
