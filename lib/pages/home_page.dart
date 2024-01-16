@@ -5,6 +5,7 @@ import 'package:lifecycle/lifecycle.dart';
 import 'package:wikylyu_xyz/widgets/animals_item.dart';
 import 'package:wikylyu_xyz/widgets/fh5_item.dart';
 import 'package:wikylyu_xyz/widgets/fm2023_item.dart';
+import 'package:wikylyu_xyz/widgets/iota_item.dart';
 import 'package:wikylyu_xyz/widgets/kof15_item.dart';
 import 'package:wikylyu_xyz/widgets/l10n/switch_language_dialog.dart';
 import 'package:wikylyu_xyz/widgets/sf6_item.dart';
@@ -72,6 +73,7 @@ class _HomePageState extends State<HomePage>
               buildHeader(),
               const Divider(),
               buildTitle(l10n.websitesIBuild),
+              const IotaItem(),
               WebsiteItem(
                 name: l10n.seogptName,
                 description: l10n.seogptDescription,

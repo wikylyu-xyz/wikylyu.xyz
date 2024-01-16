@@ -60,5 +60,7 @@
   "solely": "上述所有项目都是我一个人独自开发完成的.",
   "fm2023Description": "包含所有 Forza Motorsport 2023 赛车及详细信息。",
   "browserExtensionsIBuild": "我开发的浏览器扩展",
-  "clickManDescription": "自动点击YouTube的\"跳过广告\"按钮"
+  "clickManDescription": "自动点击YouTube的\"跳过广告\"按钮",
+  "iotaWebsiteClone": "IOTA 网站复制",
+  "iotaWebSiteCloneDescription": "IOTA网站复制，用于技术展示"
 }
