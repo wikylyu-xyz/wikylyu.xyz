@@ -67,5 +67,7 @@
   "commandlineToolsIBuild": "COMMANDLINE TOOLS",
   "mtopDescription": "A custom network proxy based on QUIC or TLS",
   "iotaWebsiteClone": "IOTA Website Clone",
-  "iotaWebSiteCloneDescription": "IOTA Website Clone for technical preview"
+  "iotaWebSiteCloneDescription": "IOTA Website Clone for technical preview",
+  "feedmusicWebsite": "Feedmusic Website",
+  "feedmusicDescription": "FeedMusic for technical preview"
 }

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:lifecycle/lifecycle.dart';
 import 'package:wikylyu_xyz/widgets/animals_item.dart';
+import 'package:wikylyu_xyz/widgets/feedmusic_item.dart';
 import 'package:wikylyu_xyz/widgets/fh5_item.dart';
 import 'package:wikylyu_xyz/widgets/fm2023_item.dart';
 import 'package:wikylyu_xyz/widgets/iota_item.dart';
@@ -75,7 +76,6 @@ class _HomePageState extends State<HomePage>
               buildHeader(),
               const Divider(),
               buildTitle(l10n.websitesIBuild),
-              const IotaItem(),
               WebsiteItem(
                 name: l10n.seogptName,
                 description: l10n.seogptDescription,
@@ -90,6 +90,8 @@ class _HomePageState extends State<HomePage>
                 iconTag: "dadachat-icon",
                 url: "https://dadachat.cn",
               ),
+              const IotaItem(),
+              const FeedmusicItem(),
               const SizedBox(height: 20),
               buildTitle(l10n.mobileAppsIBuild),
               const TearsMapItem(),
@@ -115,6 +117,8 @@ class _HomePageState extends State<HomePage>
                 iconTag: "clickman-icon",
                 url: "https://github.com/wikylyu/mtop",
               ),
+              buildTitle(l10n.novelsIWrite),
+              const ROFItem(),
               Container(
                 margin: const EdgeInsets.only(top: 40),
                 alignment: Alignment.center,

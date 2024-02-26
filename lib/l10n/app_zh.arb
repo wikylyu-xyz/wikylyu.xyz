@@ -67,5 +67,7 @@
   "commandlineToolsIBuild": "命令行工具",
   "mtopDescription": "基于 QUIC 或 TLS 的自定义网络代理",
   "iotaWebsiteClone": "IOTA 网站复制",
-  "iotaWebSiteCloneDescription": "IOTA网站复制，用于技术展示"
+  "iotaWebSiteCloneDescription": "IOTA网站复制，用于技术展示",
+  "feedmusicWebsite": "Feedmusic 网站",
+  "feedmusicDescription": "FeedMusic 用于技术展示"
 }
