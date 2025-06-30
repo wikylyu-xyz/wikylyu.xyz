@@ -1,7 +1,7 @@
 import 'package:animated_background/animated_background.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:lifecycle/lifecycle.dart';
+import 'package:wikylyu_xyz/l10n/app_localizations.dart';
 import 'package:wikylyu_xyz/widgets/animals_item.dart';
 import 'package:wikylyu_xyz/widgets/feedmusic_item.dart';
 import 'package:wikylyu_xyz/widgets/fh5_item.dart';

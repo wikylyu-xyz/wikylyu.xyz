@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:wikylyu_xyz/l10n/app_localizations.dart';
 
 class IotaItem extends StatefulWidget {
   const IotaItem({Key? key}) : super(key: key);

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+import 'package:wikylyu_xyz/l10n/app_localizations.dart';
 import 'package:wikylyu_xyz/service/colors.dart';
 import 'package:wikylyu_xyz/widgets/l10n/switch_language_dialog.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SeogptPage extends StatefulWidget {
   const SeogptPage({super.key});

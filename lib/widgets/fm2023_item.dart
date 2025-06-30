@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
+import 'package:wikylyu_xyz/l10n/app_localizations.dart';
 import 'package:wikylyu_xyz/service/colors.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FM2023Item extends StatefulWidget {
   const FM2023Item({super.key});

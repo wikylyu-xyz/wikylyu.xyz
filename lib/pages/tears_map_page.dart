@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:wikylyu_xyz/l10n/app_localizations.dart';
 import 'package:wikylyu_xyz/service/colors.dart';
 import 'package:wikylyu_xyz/widgets/l10n/switch_language_dialog.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class TearsMapPage extends StatefulWidget {
   const TearsMapPage({super.key});

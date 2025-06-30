@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localized_locales/flutter_localized_locales.dart';
 import 'package:wikylyu_xyz/bloc/language_cubit.dart';
+import 'package:wikylyu_xyz/l10n/app_localizations.dart';
 import 'package:wikylyu_xyz/service/shared.dart';
 
 class SwitchLanguageDialog extends StatefulWidget {
